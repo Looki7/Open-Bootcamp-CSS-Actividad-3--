@@ -1,4 +1,4 @@
-/* FALTA EL ÚLTIMO PASO
+/* Enunciado del ejercicio
 
 Crea un nuevo documento HTML con el título "Selectores, pseudo-clases y pseudo-elementos en CSS"
 
@@ -10,14 +10,21 @@ Utiliza las pseudo-clases para que cuando se pase el ratón por encima de este b
 
 Utiliza los pseudo-elementos para cambiar el texto del botón a "¡Hecho!"  */
 
-input::after {
-    content: "Pasa por encima";
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-input:hover {
-    color: white;
+.btn:hover {
     background-color: green;
+    color: white;
+}
+.btn::before {
     content: "Pasa por encima"
+}
+.btn:hover::before {
+    content: "¡Hecho!"
 }
 
 
